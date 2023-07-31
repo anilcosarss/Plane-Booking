@@ -1,0 +1,263 @@
+@import "mixins";
+
+.flight-information-container {
+    margin: 0;
+    padding: 50px 0;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    .flight-information {
+        @include informationContent;
+
+        .information-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid rgb(241, 175, 168);
+            padding-bottom: 10px;
+
+            .information-header-right {
+
+                h3 {
+                    font-size: 25px;
+                    text-align: start;
+                    margin: 0;
+                    margin-bottom: 15px;
+                }
+            }
+
+        }
+
+        .information-body {
+            padding-top: 10px;
+            display: flex;
+            gap: 30px;
+
+            .company {
+                margin-right: 55px;
+
+                .company-header {
+                    font-size: 28px;
+                    font-weight: 600;
+
+                }
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .company-body {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: 30px;
+
+                    img {
+                        width: 60px;
+                        border-radius: 8px;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .tail-no {
+                .tail-no-header {
+                    @include informationHeaders;
+                }
+            }
+
+            .take-off {
+
+                .take-off-header {
+                    @include informationHeaders;
+                }
+            }
+
+            .time {
+                .time-header {
+                    @include informationHeaders;
+                }
+            }
+
+            .arrive {
+
+                .arrive-header {
+                    @include informationHeaders;                    
+                }
+            }
+        }
+
+    }
+
+    .price-details {
+        @include informationContent;
+        display: flex;
+        flex-direction: column;
+        h3 {
+            @include sameH3;
+        }
+        .price-details-body {
+            display: flex;
+            gap: 30px;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        
+        }
+
+    }
+
+    .customer-information {
+        display: flex;
+        flex-direction: column;
+        @include informationContent;
+        h3 {
+            @include sameH3;
+
+        }
+        .customer-information-body{
+            display: flex;
+            flex-direction: column;
+            
+            .customers {
+                margin-bottom: 20px;
+                border-bottom: 1px solid salmon;
+                padding-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                h5 {
+                    text-align: start;
+                    font-size: 18px;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+                .customer-information-form {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    input {
+                        outline: none;
+                        max-width: 120px;
+                        padding: 5px;
+                    }
+
+                    .radio-buttons{
+                        display: flex;
+                        align-items: center;
+                                
+                    }                  
+                }
+            }
+            
+        }
+
+    }
+
+    .contact-information {
+        @include informationContent;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        .contact-information-body{
+            input{
+                outline: none;
+                margin-right: 30px;
+                height: 20px;
+                padding: 5px;
+                
+            }
+        }
+        .contact-information-footer{
+            input {
+                margin: 0;
+                margin-right: 10px
+            }
+        }
+        h3 {
+            @include sameH3;
+        }
+    }
+
+    .bill-information {
+        @include informationContent;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .bill-information-header{
+            h3{
+                @include sameH3;
+            }
+        }
+
+        .bill-information-body{
+            .radio-buttons{
+                text-align: start;
+                margin: 10px 0;
+            }
+            
+            .input-group{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                input {
+                    outline: none;
+                    height: 20px;
+                    padding: 5px;
+                }
+                .checkbox{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    input {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .ticket-insurance {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        @include informationContent;
+        
+        .ticket-insurance-header{
+            h3 {
+                @include sameH3;
+            }
+        }
+
+        .ticket-insurance-body {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+    }
+    .submit-button {
+        width: 55%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: end;
+        button {
+            @include button;
+        }
+    }
+}

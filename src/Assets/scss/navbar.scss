@@ -1,0 +1,56 @@
+@import "mixins";
+
+.navbar-container {
+    background-color: rgb(224, 94, 94);
+    color: aliceblue;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+    nav {
+        font-weight: medium;
+        font-size: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include setWidht;
+
+        .left-nav {
+            @include toCenter;
+            gap: 10px;
+            a {
+                transition: 0.4s;
+                border-bottom: 2px solid rgb(224, 94, 94);
+                cursor: pointer;
+
+
+                &:hover {
+                    transition: 0.4s;
+
+                    border-bottom: 2px solid aliceblue;
+                }
+              
+            }
+            .logo {
+                font-size: 40px;
+                padding: 7px 12px 2px 12px;
+                margin-right: 20px;
+                border-radius: 5px;
+                background-color: rgb(223, 24, 24);
+
+               
+            }
+
+            
+        }
+
+        .right-nav a {
+            background-color: rgb(223, 24, 24);
+            font-size: 40px;
+            padding: 7px 12px 2px 12px;
+            border-radius: 5px;
+        }
+
+    }
+}

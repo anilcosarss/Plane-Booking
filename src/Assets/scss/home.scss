@@ -1,0 +1,66 @@
+@import "mixins";
+
+
+.home-container {
+    padding-top: 90px;
+    height: 90vh;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+   
+    .home-header{
+        h2{
+            margin: 0;
+            padding-bottom: 50px;
+            font-size: 50px;
+        }
+    }
+    .home-body {
+        color: aliceblue;
+        border-radius: 10px;
+        background-color: rgb(224, 74, 74);
+        opacity: 0.8;
+        padding: 0px 30px 30px 30px;
+        display: inline-block;
+        
+        h3 {
+            font-size: 32px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid aliceblue;
+            text-align: start;
+        }
+        
+        .home-form {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            select {
+              @include input;
+               
+            }
+            input {
+                @include input;
+         
+            }
+              
+            
+            button {
+                @include button;
+            }
+            label {
+                margin-right: 10px;
+                font-size: 18px;
+            }
+        }
+    }
+    .home-footer {
+        text-align: start;
+        margin-top: 20px;
+        margin-bottom: 0;
+        label {
+            margin-right: 15px;
+        }
+    }
+    
+    
+}

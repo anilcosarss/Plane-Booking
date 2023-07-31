@@ -1,0 +1,134 @@
+@import "mixins";
+
+
+.flights-container {
+    padding: 40px 10px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    .flights-header {
+        background-color: rgb(224, 94, 94);
+        color: aliceblue;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px 40px;
+        border-radius: 5px;
+        width: 60%;
+        margin: 0px auto;
+        div {
+            border-radius: 5px;
+            border: 2px solid aliceblue;
+            padding: 5px 20px 5px 20px;
+            font-weight: bold;
+        }
+    }
+    .flights-body {
+        
+        background-color: rgb(224, 94, 94);
+        border-radius: 5px;
+        width: 60%;
+        margin: 0px auto;
+        margin-top: 20px;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        
+
+
+        .inner-body {
+            color: aliceblue;
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+            font-size: 18px;
+            
+
+            .company {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                         
+
+                .company-header{
+                    @include borderBottom;  
+                }
+                .company-body {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding-left: 10px;
+                    font-size: 25px;
+                   
+                }
+                
+            }
+            .right-side {
+                display: flex;
+                gap: 20px;
+            }
+            
+            .tail-no {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .tail-no-header {
+                    @include borderBottom;
+                }
+            }
+            
+            .take-off {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .take-off-header{
+                    @include borderBottom;
+                } 
+            }
+            .time {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .time-header{
+                    @include borderBottom;
+                } 
+            }
+            .arrive {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .arrive-header{
+                    @include borderBottom;
+                } 
+            }
+            .price {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .price-header{
+                    @include borderBottom;
+                } 
+            }
+           
+        }
+        .button {
+            @include toCenter;
+            border-left: 2px solid rgb(231, 150, 150);
+            padding-left: 40px;
+
+            button {
+                @include button;
+
+            }
+
+        }
+
+        
+    }
+}
